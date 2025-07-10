@@ -32,14 +32,14 @@ def get_active_streams():
 
 def pause_unmanic():
     try:
-        requests.post(f"{UNMANIC_URL}/pause", timeout=3)
+        requests.post(f"{UNMANIC_URL}/api/v1/control/pause", timeout=3)
         print("[INFO] Paused Unmanic.")
     except Exception as e:
         print(f"[ERROR] Failed to pause Unmanic: {e}")
 
 def resume_unmanic():
     try:
-        requests.post(f"{UNMANIC_URL}/resume", timeout=3)
+        requests.post(f"{UNMANIC_URL}/api/v1/control/resume", timeout=3)
         print("[INFO] Resumed Unmanic.")
     except Exception as e:
         print(f"[ERROR] Failed to resume Unmanic: {e}")
