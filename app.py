@@ -54,7 +54,7 @@ def resume_unmanic():
 # === Initialize Logger
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-logging.basicConfig()
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 logger = logging.getLogger(__name__)
 
 if DEBUG:
